@@ -3,17 +3,17 @@
 Ⓒⓡ✑ⓞⓝⓔ
 🔰هر روز سورس های ناب
 ✈ آموزش های کاربردی
-✆ADMIN: @you_Okay
-✆SUPPORT ONLINE: @MR_ARASHAM_OK
+✆ADMIN: @DR_Hesam
+✆SUPPORT ONLINE: @khabar_arz
 
-JION ✑ @CR_ONE
-JION ✑ @CR_ONE
-JION ✑ @CR_ONE
-JION ✑ @CR_ONE
+JION ✑ @khabar_arz
+JION ✑ @khabar_arz
+JION ✑ @khabar_arz
+JION ✑ @khabar_arz
 */
-/*Creator : @you_okay*/
+/*Creator : @DR_HESAM*/
 error_reporting(0);
-define('API_KEY', 'token'); /*توکن رباتتان*/
+define('API_KEY', '732144018:AAHuwupjs88WIcn4AF8OsBFZsuptwtMPr8g'); /*توکن رباتتان*/
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -51,8 +51,8 @@ $chat_id = $message->chat->id;
 $text = $message->text;
 @$message_id = $message->message_id;
 $from_id = $message->from->id;
-$admin = 601495581; /*ایدی عددی ادمین*/
-$channel = "-1001350589301"; /*ایدی عددی کانال*/
+$admin = 698038310; /*ایدی عددی ادمین*/
+$channel = "-1001128336775"; /*ایدی عددی کانال*/
 $message_id2 = $message->message_id;
 $command = file_put_contents("data/commanda.doc");
 $bcpv = file_get_contents("bcpv.doc");
@@ -81,7 +81,7 @@ $step = file_get_contents("data/".$from_id."/step.doc");
 ]);
 }        
 //=================//
- if ($text == "ارشم" or
+ if ($text == "حسام" or
 $text == "مدیریت") {
         bot('sendmessage', [
             'chat_id' => $admin,
