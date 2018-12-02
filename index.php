@@ -4,7 +4,7 @@
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 */
 ob_start();
-define('API_KEY','792452128:AAFsQRpkmpqZC-MEdyim6Hf-8j-nO5Nqk9c'); // توکن ربات
+define('API_KEY','696846250:AAGAWlQgjtwVNQfNURS-SzC88PvL_9g2LZs'); // توکن ربات
 //========= Functions ===========
 function bot($method,$datas=[]){
 $url = "https://api.telegram.org/bot".API_KEY."/".$method;
