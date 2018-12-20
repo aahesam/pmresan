@@ -7,8 +7,8 @@
 */
 error_reporting(0);
 //--------[Your Config]--------//
-$Dev = ایدی عددی ادمین; //--Put Dev ID
-$Token = 'توکن'; //--Put BotToken
+$Dev = 698038310; //--Put Dev ID
+$Token = '751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ'; //--Put BotToken
 $ex = explode(":",$Token);
 $BotID = $ex[0];
 //-----------------------------//
