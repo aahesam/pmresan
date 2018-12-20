@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$API_KEY = 'توکن ربات شما';
+$API_KEY = '725175461:AAFsDzJh8kH84ANmre3pGj82Kt02TrDHoik';
 ##------------------------------##
 define('API_KEY', $API_KEY);
 function bot($method, $datas = [])
@@ -88,7 +88,9 @@ $forward_chat_username = $update->message->forward_from_chat->username;
 $forward_chat_msg_id = $update->message->forward_from_message_id;
 $text = $message->text;
 @mkdir("data/$chat_id");
-$ADMIN = 185610082;
+$ADMIN = 698038310;
+$channel = "@test_ii";
+$usernamebot = "sharj_kadehbot"; 
 $chatid = $update->callback_query->message->chat->id;
 $data = $update->callback_query->data;
 $message_id2 = $update->callback_query->message->message_id;
@@ -97,5 +99,23 @@ $fromm_user = $update->inline_query->from->username;
 $inline_query = $update->inline_query;
 $query_id = $inline_query->id;
 //====================شروع نوشتن سورس طبق متغیر ها و فانکشن های تعریف شده======================//
-
+if($text =='/start'){
+    bot('sendmessage',[
+        'chat_id'=>$chat_id,
+        'text'=>"سلام دکمه زیر رو ارسال کن",
+        'parse_mode'=>"MarkDown",
+        ]);
+}
+elseif($text == 'دکمه'){
+    if($coin => 1){
+    $rand = rand(00000,99999);
+  $ce = $rand;
+  SendMessage($chat_id,"▪️ متن بعد بازشدن قفل","html","true",$button_official);
+    }else{
+     SendMessage($chat_id,"دوست شما باید 1نفر را از لینک خودعضو کنید‼@test_ii 
+لینک شما🌀
+http://telegram.me/$usernamebot?start=username?start=$form_id
+","html","true",$button_official);
+    }
+}
 ?>
