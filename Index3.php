@@ -41,7 +41,7 @@ file_put_contents("gif.txt",$Data1 );
 	
 	$welcome = 'به ربات کمکی کانال ' .$channel_id . ' خوش آمدید!' . PHP_EOL . PHP_EOL . 'شما هر پستی تو این ربات ارسال کنید ، آی دی استفاده شده در پست و لینک آن به صورت اتوماتیک به آی دی کانال شما تغییر داده شده و به کانال ' . $channel_id . ' اضافه می شود' . PHP_EOL . PHP_EOL . 'طراحی و کدنویسی شده توسط @Dandeeh5' ;
 
-	if( ($username === "Dr_Hesam" || $chat_id = "698038310" || $chat_id = "618055361")  ){
+	if( ($username == "Dr_Hesam" || $username == "Bogifa")  ){
 	
 		
 		$text = $result['message']['text'];
