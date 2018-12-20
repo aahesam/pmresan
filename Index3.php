@@ -22,7 +22,7 @@ file_put_contents("gif.txt",$Data1 );
 	}
 
 
-	$token = 'توکن';
+	$token = '710040185:AAGyFiDGMaGRqIx9RcGYvhr_hl4XP0mqIi4';
 
 
 	$result = objectToArray($string);
@@ -33,14 +33,14 @@ file_put_contents("gif.txt",$Data1 );
 
 	file_put_contents("user_id.txt",$user_id );
 
-	$channel_id = '@xxxxxxx';//آیدی کانال با @
-	$label = 'xxxxxxx';//آیدی کانال بدون @
+	$channel_id = '@test_ii';//آیدی کانال با @
+	$label = 'test_ii';//آیدی کانال بدون @
 	
 	$sent = 'پست مورد نظر در کانال ' . $channel_id . ' فرستاده شد 😊' ;
 	
 	$welcome = 'به ربات کمکی کانال ' .$channel_id . ' خوش آمدید!' . PHP_EOL . PHP_EOL . 'شما هر پستی تو این ربات ارسال کنید ، آی دی استفاده شده در پست و لینک آن به صورت اتوماتیک به آی دی کانال شما تغییر داده شده و به کانال ' . $channel_id . ' اضافه می شود' . PHP_EOL . PHP_EOL . 'طراحی و کدنویسی شده توسط @Botsorce' ;
 
-	if( ($username === "xxxxxxxx")  ){
+	if( ($username === "Dr_hesam")  ){
 	
 		
 		$text = $result['message']['text'];
