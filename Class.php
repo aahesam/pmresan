@@ -2,11 +2,11 @@
 /* ob Start */
 ob_start();
 /* Token Bot */
-define('API_KEY','');
+define('API_KEY','751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ');
 /* Admin List */
-$admin =  "";
-$admin1 = "";
-$admin2 = "";
+$admin =  "698038310";
+$admin1 = "698038310";
+$admin2 = "618055361";
 /* Tabee Save */
 function save($filename,$TXTdata){
 	$myfile = fopen($filename, "w") or die("Unable to open file!");
@@ -106,7 +106,7 @@ function SendSticker($chatid,$sticker,$keyboard){
 	'reply_markup'=>json_encode([
             'inline_keyboard'=>[
        [
-                          ['text'=>"🐦 ارسال توئیت و پیام شما",'url'=>'https://telegram.me/apnu_tweetbot']
+                          ['text'=>"🐦 ارسال توئیت و پیام شما",'url'=>'https://telegram.me/wateri_bot']
 
 ]]])
 	]);
