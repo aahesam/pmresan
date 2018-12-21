@@ -7,7 +7,7 @@
 include("Telegram.php");
 
 // Set the bot TOKEN
-$bot_id = "YOUR-TOKEN";
+$bot_id = "751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ";
 
 // Instances the class
 $telegram = new Telegram($bot_id);
@@ -54,7 +54,7 @@ if($up_type=='photo'){
 		file_put_contents('tmp_img/'.$file_name,file_get_contents($full_path));
 
 		$new_file = logoWatermark($file_name);
-		$new_full_path = 'https://YOUR-SITE.ir/BOT-FOLDER/tmp_img/'.$new_file;
+		$new_full_path = 'https://aaahesam.000webhostapp.com/watermarkbot/tmp_img/'.$new_file;
 
 		$content = array('chat_id' => $chat_id, 'photo' => $new_full_path, 'caption' => $text);
 		$telegram->sendPhoto($content);	
