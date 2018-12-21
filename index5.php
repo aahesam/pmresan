@@ -80,7 +80,7 @@ function Forward($KojaShe, $AzKoja, $KodomMSG)
     ]);
 }
 function getChatstats($chat_id,$token) {
-  $url = 'https://api.telegram.org/bot'.$token.'/getChatAdministrators?chat_id=@'.$chat_id;
+  $url = 'https://api.telegram.org/bot'.$token.'/getChatAdministrators?chat_id=@test_ii'.$chat_id;
   $result = file_get_contents($url);
   $result = json_decode ($result);
   $result = $result->ok;
@@ -150,11 +150,11 @@ $lock = file_get_contents('lock.txt');
 $mehdi = file_get_contents("databot/$chat_id/rasol.txt");
 $dataa=$update->callback_query->data;
 $chatidd = $update->callback_query->from->id;
-$ADMIN = 698038310; 
+$ADMIN = "698038310"; 
 $chatid = $update->callback_query->message->chat->id;
 $databot = $update->callback_query->databot;
 $message_id2 = $update->callback_query->message->message_id;
-$check1 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@test_iie&user_id=$from_id"))->result->status;
+$check1 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@test_ii&user_id=$from_id"))->result->status;
 $check2 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@test_ii&user_id=$from_id"))->result->status;
 $timee = json_decode(file_get_contents("http://api-bot-telegram.cf/api/time.php?token=751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ"));
 $time2 = objectToArrays($timee);
@@ -277,8 +277,8 @@ mkdir("databot/$chat_id");
 تعداد موشک های شما : $mosak11");
 }
 } elseif($databot=="join"){
-$check11 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Nic_Source&user_id=$chatid"))->result->status;
-$check22 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Nic_Source&user_id=$chatid"))->result->status;
+$check11 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@test_ii&user_id=$chatid"))->result->status;
+$check22 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@test_ii&user_id=$chatid"))->result->status;
 if($check11 != "member" && $check11 != "creator" && $check11 != "administrator" or $check22 != "member" && $check22 != "creator" && $check22 != "administrator"){
      $chack =   bot('editmessagetext', [
             'chat_id' => $chatid,
@@ -295,10 +295,10 @@ Nic_Source :@test_ii
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
                 [ 
-                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -322,10 +322,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
                 [ 
-                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -355,10 +355,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
                 [ 
-                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
 		[
 	['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -586,9 +586,9 @@ $lickeem = file_get_contents("databot/like/$lik-lick.txt");
 				}elseif($mehdi=="phrto"){
 				if(isset($message->photo)){
 					file_put_contents("databot/$chat_id/rasol.txt","no");
-					$url = json_decode(file_get_contents('https://api.telegram.org/botتوکن/getFile?file_id='.$file_id),true);
+					$url = json_decode(file_get_contents('https://api.telegram.org/bot751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ/getFile?file_id='.$file_id),true);
 				$path=$url['result']['file_path'];
-           $file = 'https://api.telegram.org/file/botتوکن/'.$path;
+           $file = 'https://api.telegram.org/file/bot751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ/'.$path;
 					file_put_contents("databot/$chat_id/$file_id.jpg",file_get_contents($file));
 					$text=file_get_contents("databot/$chat_id/text.txt");
 $id = file_get_contents("databot/$chat_id/idfla.txt");
@@ -614,7 +614,7 @@ $id = file_get_contents("databot/$chat_id/idfla.txt");
     } elseif ($text == "➕دریافت لینک خصوصی کانال") {
             sendAction($chat_id, 'typing');
 $id = file_get_contents("databot/$chat_id/idfla.txt");
-$getlink = file_get_contents("https://api.telegram.org/botتوکن/exportChatInviteLink?chat_id=@".$id);
+$getlink = file_get_contents("https://api.telegram.org/bot751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ/exportChatInviteLink?chat_id=@".$id);
 $jsonlink = json_decode($getlink, true);
 $getlinkde = $jsonlink['result'];
 bot('sendmessage',[
@@ -627,7 +627,7 @@ $getlinkde",
     } elseif ($text == "▪️ادمین های کانال") {
             sendAction($chat_id, 'typing');
 $id = file_get_contents("databot/$chat_id/idfla.txt");
-  $up = json_decode(file_get_contents("https://api.telegram.org/botتوکن/getChatAdministrators?chat_id=@".$id),true);
+  $up = json_decode(file_get_contents("https://api.telegram.org/bot751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ/getChatAdministrators?chat_id=@".$id),true);
   $result = $up['result'];
   foreach($result as $key=>$value){
     $found = $result[$key]['status'];
@@ -1090,10 +1090,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
                 [ 
-                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -1110,7 +1110,7 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
 		sendAction($chat_id, 'typing');
  $mosak11 = file_get_contents("databot/$chat_id/membrs.txt");
 if ($mosak11 >= "0"){
-file_put_contents("databot/$chat_id/rasol.txt","توکن");
+file_put_contents("databot/$chat_id/rasol.txt","751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ");
  bot('sendMessage',[
             'chat_id' => $chat_id,
  'text'=>"لطفا ایدی کانال خود را بدون @ وارد کنید🤑
@@ -1119,7 +1119,7 @@ file_put_contents("databot/$chat_id/rasol.txt","توکن");
         ]);
 }
 }
-} elseif ($mehdi == "توکن") {
+} elseif ($mehdi == "751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ") {
             $channell = file_get_contents("databot/channel.txt");
             $channelsabtt = explode("\n", $channell);
             if (strpos($channell, $text)){
@@ -1131,8 +1131,8 @@ file_put_contents("databot/$chat_id/rasol.txt","توکن");
         ]);
       }else{
     sendAction($chat_id, 'typing');
-  $url = 'https://api.telegram.org/botتوکن/getChatAdministrators?chat_id=@'.$text;
-$admin = getChatstats(@$text,"توکن");
+  $url = 'https://api.telegram.org/bot751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ/getChatAdministrators?chat_id=@'.$text;
+$admin = getChatstats(@$text,"751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ");
 if($admin != true){
           bot('sendmessage', [
             'chat_id' => $chat_id,
@@ -1180,10 +1180,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
                 [ 
-                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -1219,10 +1219,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"کانال نیک سورس",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
                 [ 
-                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/Nic_Source"] 
+                    ['text'=>"Nic_Source",'url'=>"https://telegram.me/test_ii"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -1262,11 +1262,11 @@ bot("answerInlineQuery",[
       "type"=>"article",
       "id"=>base64_encode(rand(5,555)),
       "title"=>"سازنده ربات 🤖",
-      "input_message_content"=>["parse_mode"=>"html","message_text"=>"کانال نیک سورس t.me/php3"],
+      "input_message_content"=>["parse_mode"=>"html","message_text"=>"کانال نیک سورس t.me/test_ii"],
       "thumb_url"=>"",
-     "reply_markup"=>["inline_keyboard"=>[[["text"=>"کانال نیک سورس","url"=>"http://telegram.me/nic-source"],["text"=>"Nic_Source","url"=>"http://telegram.me/Nic_Source"]],
-[["text"=>"nic_source","url"=>"http://telegram.me/php3"]],
-[["text"=>"نیک سورس","url"=>"http://telegram.me/php3"]],
+     "reply_markup"=>["inline_keyboard"=>[[["text"=>"کانال نیک سورس","url"=>"http://telegram.me/test_ii"],["text"=>"Nic_Source","url"=>"http://telegram.me/Nic_Source"]],
+[["text"=>"nic_source","url"=>"http://telegram.me/test_ii"]],
+[["text"=>"نیک سورس","url"=>"http://telegram.me/test_ii"]],
 [["text"=>"🔍اشتراک برای دیگران🚀","switch_inline_query"=>"سازنده ربات 🤖"]]]]
     ]])
   ]);
