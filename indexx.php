@@ -14,9 +14,9 @@ ob_start();
 error_reporting(0);
 flush();
 //-------[ Your Config ]-------//
-$admin = #IDADMIN;
-$channel = "#CHANNELID";
-$token = '#TOKENROBAT';
+$admin = "698038310";
+$channel = "-1001188370083";
+$token = '681497805:AAEtZ3bLias74vdxxr9j6UyUMCUzzCq05sY';
 //-------[ newbot ]-------//
 define('API_KEY',$token);
 //-------[ function ]-------//
