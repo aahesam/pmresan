@@ -8,7 +8,7 @@
 include("Telegram.php");
 
 // Set the bot TOKEN
-$bot_id = "Your_Token";
+$bot_id = "681497805:AAEtZ3bLias74vdxxr9j6UyUMCUzzCq05sY";
 // Instances the class
 $telegram = new Telegram($bot_id);
 
@@ -16,7 +16,7 @@ $telegram = new Telegram($bot_id);
 $text 			  = $telegram->Text();
 $chat_id 		  = $telegram->ChatID();
 
-$channel_name 	  = '@Your_Channel_Name'; // @howCreateBot
+$channel_name 	  = '@test_ii'; // @howCreateBot
 
 /************ DETECT CONTENT TYPE ************/
 
