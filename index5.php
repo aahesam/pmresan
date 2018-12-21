@@ -11,7 +11,7 @@ set_time_limit(0);
 flush();
 
 
-$API_KEY = 'توکن';
+$API_KEY = '751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ';
 ##------------------------------##
 define('API_KEY', $API_KEY);
 /*فانکشن برای هر سورسی الزامی است و ادیت کردن این بخش به هیچ وج توصیه نمیشود*/
@@ -150,24 +150,24 @@ $lock = file_get_contents('lock.txt');
 $mehdi = file_get_contents("databot/$chat_id/rasol.txt");
 $dataa=$update->callback_query->data;
 $chatidd = $update->callback_query->from->id;
-$ADMIN = ادمین; 
+$ADMIN = 698038310; 
 $chatid = $update->callback_query->message->chat->id;
 $databot = $update->callback_query->databot;
 $message_id2 = $update->callback_query->message->message_id;
-$check1 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Nic_Source&user_id=$from_id"))->result->status;
-$check2 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Nic_Source&user_id=$from_id"))->result->status;
-$timee = json_decode(file_get_contents("http://api-bot-telegram.cf/api/time.php?token=توکن"));
+$check1 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@test_iie&user_id=$from_id"))->result->status;
+$check2 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@test_ii&user_id=$from_id"))->result->status;
+$timee = json_decode(file_get_contents("http://api-bot-telegram.cf/api/time.php?token=751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ"));
 $time2 = objectToArrays($timee);
 $time = $time2["FAtime"];
 $date = $time2["FAdate"];
-$chistan = file_get_contents("http://api-bot-telegram.cf/api/chistan.php?token=توکن");
+$chistan = file_get_contents("http://api-bot-telegram.cf/api/chistan.php?token=751222329:AAFtXgIeRwPNZCh1plOec1dv5ULeb0pwXoQ");
 $textmaschannel = "🔒 ربات قفل است.
 
 ⚠️ برای فعالیت در ربات لطفا در کانال های ( کانال نیک سورس , Nic_Source )  عضو شوید
 
-کانال نیک سورس :@Nic_Source
+کانال نیک سورس :@test_ii
 
-Nic_Source :@Nic_Source
+Nic_Source :@test_ii
 
 ♻️ پس از عضویت لطفا روی دکمه ی ( عضو شدم🛰  ) کلیک کنید.";
 ///
@@ -287,9 +287,9 @@ if($check11 != "member" && $check11 != "creator" && $check11 != "administrator" 
 
 ⚠️ برای فعالیت در ربات لطفا در کانال های ( کانال نیک سورس , Nic_Source )  عضو شوید
 
-کانال نیک سورس :@Nic_Source
+کانال نیک سورس :@test_ii
 
-Nic_Source :@Nic_Source
+Nic_Source :@test_ii
 
 ♻️ پس از عضویت لطفا روی دکمه ی ( عضو شدم🛰  ) کلیک کنید.", 
         'reply_markup'=>json_encode([ 
