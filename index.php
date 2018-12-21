@@ -13,8 +13,8 @@ by : @MrLTE
 
 */
 ob_start();
-$API_KEY = 'bot token'; // توکن ربات
-$admin=00000000; // آیدی عددی ادمین
+$API_KEY = '795641758:AAEQL3FZovKgc0kzLnoFAfyrZt8g6ACfgNs'; // توکن ربات
+$admin= "698038310"; // آیدی عددی ادمین
 ##------------------------------##
 define('API_KEY',$API_KEY);
 function bot($method,$datas=[]){
