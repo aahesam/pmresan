@@ -110,14 +110,14 @@ $img->saveBIG = 1; //salvare immagine grande 1 o 0
 $img->saveTHUMB = 0; //salvare thumb -> 1 o 0
 $img->AddLogo($picurl, "logo.png");
 $newpic=$pict.'_big.jpg';
-$cap="mrfenj";
+$cap="sola";
 	 pma($newpic,$chat_id,$cap,$API_KEY);
 }else{
 	 $text = 'saalaaaaaam only pic';
 	$post = 'https://api.telegram.org/bot'.$API_KEY.'/sendMessage';
 				$matn = urlencode($text);
 				
-	$post.="?text=$matn&caption=@mrfenj&chat_id=$chat_id";
+	$post.="?text=$matn&caption=@test_inbar&chat_id=$chat_id";
 	echo file_get_contents($post);
 }
 
@@ -125,7 +125,7 @@ $cap="mrfenj";
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
-$bot_id="237966204:AAExLADwKL5KCi54dRF1nF7xLHH4dGCuewA";
+$bot_id="777113449:AAHrhhC6-NLYovqkPXWO72lCi0ZnhbKdxVo";
 if (isset($update["message"])) {
 	
   processMessage($update["message"],$bot_id);
