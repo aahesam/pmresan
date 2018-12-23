@@ -3,7 +3,7 @@ ob_start();
 /*
 
 */
-define('API_KEY',"760376813:AAFbQ4kYNCNRy5RdElS6AWXXIbYUlcsa41E");
+define('API_KEY',"[*[*TOKEN*]*]");
  
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -19,7 +19,7 @@ function bot($method,$datas=[]){
     }
 }
 $up=json_decode(file_get_contents('php://input'));
-$sudo=784583497;
+$sudo=[*[*ADMIN*]*];
 $caption=$up->message->caption;
 $fwd_id=$up->message->reply_to_message->forward_from->id;
 $first_name=$up->message->from->first_name;
